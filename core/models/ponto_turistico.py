@@ -1,3 +1,4 @@
+from atracoes.models import Atracao
 from django.db import models
 
 
@@ -19,6 +20,11 @@ class PontoTuristico(models.Model):
     aprovado = models.BooleanField(
         verbose_name='Aprovado',
         default=False
+    )
+
+    atracoes = models.ManyToManyField(
+        Atracao,
+        verbose_name='Atrações'
     )
 
     def __str__(self):

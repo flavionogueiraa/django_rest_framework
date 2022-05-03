@@ -1,30 +1,30 @@
 from django.contrib import admin
 
-from ..models import PontoTuristico
+from ..models import Atracao
 
 
-@admin.register(PontoTuristico)
-class PontoTuristicoAdmin(admin.ModelAdmin):
+@admin.register(Atracao)
+class AtracaoAdmin(admin.ModelAdmin):
     list_display = [
         'id',
         'nome',
         'descricao',
-        'aprovado'
+        'horario_abertura',
+        'horario_fechamento',
+        'idade_minima',
     ]
 
     search_fields = [
         'id',
         'nome',
         'descricao',
-        'aprovado'
+        'horario_abertura',
+        'horario_fechamento',
+        'idade_minima'
     ]
 
     list_filter = [
-        'aprovado'
-    ]
-
-    filter_horizontal = [
-        'atracoes'
+        'idade_minima',
     ]
 
     # autocomplete_fields = [
