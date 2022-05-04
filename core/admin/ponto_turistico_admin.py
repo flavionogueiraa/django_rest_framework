@@ -24,7 +24,9 @@ class PontoTuristicoAdmin(admin.ModelAdmin):
     ]
 
     filter_horizontal = [
-        'atracoes'
+        'atracoes',
+        'comentarios',
+        'avaliacoes'
     ]
 
     # autocomplete_fields = [

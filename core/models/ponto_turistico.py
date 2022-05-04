@@ -1,4 +1,6 @@
 from atracoes.models import Atracao
+from avaliacoes.models import Avaliacao
+from comentarios.models import Comentario
 from django.db import models
 
 
@@ -24,7 +26,20 @@ class PontoTuristico(models.Model):
 
     atracoes = models.ManyToManyField(
         Atracao,
-        verbose_name='Atrações'
+        verbose_name='Atrações',
+        blank=True
+    )
+
+    comentarios = models.ManyToManyField(
+        Comentario,
+        verbose_name='Comentários',
+        blank=True
+    )
+
+    avaliacoes = models.ManyToManyField(
+        Avaliacao,
+        verbose_name='Avaliações',
+        blank=True
     )
 
     def __str__(self):

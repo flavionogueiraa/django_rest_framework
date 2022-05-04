@@ -25,6 +25,8 @@ INSTALLED_APPS = [
 
     # Apps
     'atracoes',
+    'avaliacoes',
+    'comentarios',
     'core',
 
     # Bibliotecas
