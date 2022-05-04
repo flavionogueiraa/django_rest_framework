@@ -28,6 +28,7 @@ INSTALLED_APPS = [
     'avaliacoes',
     'comentarios',
     'core',
+    'enderecos',
 
     # Bibliotecas
     'rest_framework'

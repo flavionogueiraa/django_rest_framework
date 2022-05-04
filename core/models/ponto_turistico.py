@@ -2,7 +2,7 @@ from atracoes.models import Atracao
 from avaliacoes.models import Avaliacao
 from comentarios.models import Comentario
 from django.db import models
-
+from enderecos.models import Endereco
 
 class PontoTuristico(models.Model):
     '''
@@ -17,6 +17,13 @@ class PontoTuristico(models.Model):
 
     descricao = models.TextField(
         verbose_name='Descrição'
+    )
+
+    endereco = models.OneToOneField(
+        Endereco,
+        verbose_name='Endereço',
+        null=True, blank=True,
+        on_delete=models.SET_NULL
     )
 
     aprovado = models.BooleanField(

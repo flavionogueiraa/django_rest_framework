@@ -29,6 +29,6 @@ class PontoTuristicoAdmin(admin.ModelAdmin):
         'avaliacoes'
     ]
 
-    # autocomplete_fields = [
-    #     'campos_fk
-    # ]
+    autocomplete_fields = [
+        'endereco'
+    ]
