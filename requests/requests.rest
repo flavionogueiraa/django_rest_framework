@@ -1,0 +1,23 @@
+PUT http://localhost:8000/core/pontoturistico/1/
+Content-Type: application/json
+
+{
+    "id": 1,
+    "nome": "Ponto Turistico 1",
+    "descricao": "Descricao do ponto turistico 1"
+}
+
+###
+GET http://localhost:8000/core/pontoturistico/1/
+
+###
+POST http://localhost:8000/core/pontoturistico/
+Content-Type: application/json
+
+{
+    "nome": "Mais um ponto turístico",
+    "descricao": "Mais uma descrição de ponto turístico"
+}
+
+###
+DELETE http://localhost:8000/core/pontoturistico/4/
