@@ -1,4 +1,4 @@
-PUT http://localhost:8000/core/pontoturistico/1/
+put http://localhost:8000/core/pontoturistico/1/
 Content-Type: application/json
 
 {
@@ -8,10 +8,10 @@ Content-Type: application/json
 }
 
 ###
-GET http://localhost:8000/core/pontoturistico/1/
+get http://localhost:8000/core/pontoturistico/1/
 
 ###
-POST http://localhost:8000/core/pontoturistico/
+post http://localhost:8000/core/pontoturistico/
 Content-Type: application/json
 
 {
@@ -20,4 +20,45 @@ Content-Type: application/json
 }
 
 ###
-DELETE http://localhost:8000/core/pontoturistico/4/
+delete http://localhost:8000/core/pontoturistico/4/
+
+###
+get http://localhost:8000/atracao/
+
+###
+post http://localhost:8000/atracao/
+Content-Type: application/json
+
+{
+    "nome": "Barraca de cachorro quente",
+    "descricao": "O melhor cachorro quente da região",
+    "horario_abertura": "17:30:00",
+    "horario_fechamento": "00:00:00",
+    "idade_minima": "3"
+}
+
+###
+get http://localhost:8000/atracao/2/
+
+###
+delete http://localhost:8000/atracao/6/
+
+###
+put http://localhost:8000/atracao/5/
+Content-Type: application/json
+
+{
+    "nome": "Barraca de cachorro quente",
+    "descricao": "O melhor cachorro quente da região",
+    "horario_abertura": "17:30:00",
+    "horario_fechamento": "00:00:00",
+    "idade_minima": 0
+}
+
+###
+patch http://localhost:8000/atracao/5/
+Content-Type: application/json
+
+{
+    "idade_minima": 2
+}
