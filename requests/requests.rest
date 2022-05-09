@@ -62,3 +62,20 @@ Content-Type: application/json
 {
     "idade_minima": 2
 }
+
+###
+get http://localhost:8000/endereco/
+
+###
+post http://localhost:8000/endereco/
+Content-Type: application/json
+
+{
+    "linha1": "Rua das Flores",
+    "linha2": "Rua das Flores",
+    "cidade": "Cachorro",
+    "estado": "SC",
+    "pais": "Brasil",
+    "latitude": "-27.0",
+    "longitude": "-48.0"
+}
