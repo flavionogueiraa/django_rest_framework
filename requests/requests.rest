@@ -79,3 +79,29 @@ Content-Type: application/json
     "latitude": "-27.0",
     "longitude": "-48.0"
 }
+
+
+###
+get http://localhost:8000/comentarios/
+
+###
+post http://localhost:8000/comentarios/
+Content-Type: application/json
+
+{
+    "comentario": "Comentário pelo rest client, brinca",
+    "usuario": 1
+}
+
+###
+delete http://localhost:8000/comentarios/4/
+
+###
+put http://localhost:8000/comentarios/3/
+Content-Type: application/json
+
+{
+    "comentario": "Comentário pelo rest client, olha só que bacana",
+    "usuario": 1,
+    "aprovado": false
+}
