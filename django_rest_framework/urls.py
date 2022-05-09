@@ -1,4 +1,5 @@
 from atracoes.urls import atracoes_router
+from avaliacoes.urls import avaliacoes_router
 from comentarios.urls import comentarios_router
 from core.urls import core_router
 from django.conf import settings
@@ -13,6 +14,7 @@ main_router.registry.extend(atracoes_router.registry)
 main_router.registry.extend(core_router.registry)
 main_router.registry.extend(enderecos_router.registry)
 main_router.registry.extend(comentarios_router.registry)
+main_router.registry.extend(avaliacoes_router.registry)
 
 urlpatterns = [
     path('admin/', admin.site.urls),
