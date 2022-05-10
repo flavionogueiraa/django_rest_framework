@@ -23,10 +23,10 @@ Content-Type: application/json
 delete http://localhost:8000/core/pontoturistico/4/
 
 ###
-get http://localhost:8000/atracao/
+get http://localhost:8000/atracoes/
 
 ###
-post http://localhost:8000/atracao/
+post http://localhost:8000/atracoes/
 Content-Type: application/json
 
 {
@@ -38,13 +38,13 @@ Content-Type: application/json
 }
 
 ###
-get http://localhost:8000/atracao/2/
+get http://localhost:8000/atracoes/1/
 
 ###
-delete http://localhost:8000/atracao/6/
+delete http://localhost:8000/atracoes/6/
 
 ###
-put http://localhost:8000/atracao/5/
+put http://localhost:8000/atracoes/5/
 Content-Type: application/json
 
 {
@@ -56,7 +56,7 @@ Content-Type: application/json
 }
 
 ###
-patch http://localhost:8000/atracao/5/
+patch http://localhost:8000/atracoes/5/
 Content-Type: application/json
 
 {
