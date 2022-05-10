@@ -4,7 +4,7 @@ from rest_framework import routers
 from .api.viewsets import PontoTuristicoViewSet
 
 core_router = routers.DefaultRouter()
-core_router.register('pontos-turisticos', PontoTuristicoViewSet)
+core_router.register('pontos-turisticos', PontoTuristicoViewSet, basename='PontoTuristico')
 
 urlpatterns = [
     

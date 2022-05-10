@@ -1,4 +1,4 @@
-put http://localhost:8000/core/pontoturistico/1/
+put http://localhost:8000/pontos-turisticos/1/
 Content-Type: application/json
 
 {
@@ -8,10 +8,10 @@ Content-Type: application/json
 }
 
 ###
-get http://localhost:8000/core/pontoturistico/1/
+get http://localhost:8000/pontos-turisticos/
 
 ###
-post http://localhost:8000/core/pontoturistico/
+post http://localhost:8000/pontos-turisticos/
 Content-Type: application/json
 
 {
@@ -20,7 +20,7 @@ Content-Type: application/json
 }
 
 ###
-delete http://localhost:8000/core/pontoturistico/4/
+delete http://localhost:8000/pontos-turisticos/4/
 
 ###
 get http://localhost:8000/atracoes/
