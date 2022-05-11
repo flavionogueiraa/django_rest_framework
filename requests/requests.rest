@@ -20,7 +20,7 @@ Content-Type: application/json
 }
 
 ###
-delete http://localhost:8000/pontos-turisticos/4/
+delete http://localhost:8000/pontos-turisticos/1/
 
 ###
 get http://localhost:8000/atracoes/
