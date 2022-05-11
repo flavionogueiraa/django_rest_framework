@@ -11,12 +11,32 @@ Content-Type: application/json
 get http://localhost:8000/pontos-turisticos/
 
 ###
+get http://localhost:8000/pontos-turisticos/1
+
+###
 post http://localhost:8000/pontos-turisticos/
 Content-Type: application/json
 
 {
     "nome": "Mais um ponto turístico",
     "descricao": "Mais uma descrição de ponto turístico"
+}
+
+###
+put http://localhost:8000/pontos-turisticos/1/
+Content-Type: application/json
+
+{
+    "nome": "Mais um ponto turístico",
+    "descricao": "Mais uma descrição de ponto turístico"
+}
+
+###
+patch http://localhost:8000/pontos-turisticos/1/
+Content-Type: application/json
+
+{
+    "nome": "Mais um ponto turístico",
 }
 
 ###
