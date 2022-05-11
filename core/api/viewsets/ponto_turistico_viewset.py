@@ -15,3 +15,8 @@ class PontoTuristicoViewSet(viewsets.ModelViewSet):
     #     return Response({
     #         'teste': 'É só um teste'
     #     })
+
+    def create(self, request, *args, **kwargs):
+        return Response({
+            'Hello': request.data['nome']
+        })
