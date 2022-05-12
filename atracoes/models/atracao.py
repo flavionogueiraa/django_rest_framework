@@ -16,6 +16,12 @@ class Atracao(models.Model):
         verbose_name='Descrição'
     )
 
+    foto = models.ImageField(
+        verbose_name='Foto',
+        upload_to='atracoes',
+        null=True, blank=True
+    )
+
     horario_abertura = models.TimeField(
         verbose_name='Horário de abertura'
     )

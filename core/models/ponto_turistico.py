@@ -19,6 +19,12 @@ class PontoTuristico(models.Model):
         verbose_name='Descrição'
     )
 
+    foto = models.ImageField(
+        verbose_name='Foto',
+        upload_to='pontos_turisticos',
+        null=True, blank=True
+    )
+
     endereco = models.OneToOneField(
         Endereco,
         verbose_name='Endereço',
