@@ -8,7 +8,7 @@ Content-Type: application/json
 }
 
 ###
-get http://localhost:8000/pontos-turisticos/
+get http://localhost:8000/pontos-turisticos/?id=1&nome=mais um ponto turístico&descricao=Mais uma descrição de ponto turístico
 
 ###
 get http://localhost:8000/pontos-turisticos/1/
