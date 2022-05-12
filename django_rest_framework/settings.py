@@ -31,7 +31,8 @@ INSTALLED_APPS = [
     'enderecos',
 
     # Bibliotecas
-    'rest_framework'
+    'django_filters',
+    'rest_framework',
 ]
 
 MIDDLEWARE = [
@@ -70,6 +71,10 @@ DATABASES = {
     'default': config(
         'DATABASE_URL', default=default_dburl, cast=dburl
     )
+}
+
+REST_FRAMEWORK = {
+    'DEFAULT_FILTER_BACKENDS': ['django_filters.rest_framework.DjangoFilterBackend']
 }
 
 AUTH_PASSWORD_VALIDATORS = [
