@@ -11,6 +11,16 @@ Content-Type: application/json
 get http://localhost:8000/pontos-turisticos/?id=1&nome=mais um ponto turístico&descricao=Mais uma descrição de ponto turístico
 
 ###
+get http://localhost:8000/pontos-turisticos/
+Content-Type: application/json
+Authorization: token 23e1cdfd001b8507ac6d7ce19db22e362cdd507e
+
+###
+get http://localhost:8000/pontos-turisticos/
+Content-Type: application/json
+Authorization: token 601afb84f519691e026b77b64de9677dd28e1c2c
+
+###
 get http://localhost:8000/pontos-turisticos/1/
 
 ###
