@@ -8,6 +8,7 @@ from django.contrib import admin
 from django.urls import include, path
 from enderecos.urls import enderecos_router
 from rest_framework import routers
+from rest_framework.authtoken.views import obtain_auth_token
 
 main_router = routers.DefaultRouter()
 main_router.registry.extend(atracoes_router.registry)
@@ -18,5 +19,6 @@ main_router.registry.extend(avaliacoes_router.registry)
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('api-auth-token/', obtain_auth_token),
     path('', include(main_router.urls)),
 ]  + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

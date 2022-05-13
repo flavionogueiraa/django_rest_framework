@@ -32,6 +32,7 @@ INSTALLED_APPS = [
 
     # Bibliotecas
     'django_filters',
+    'rest_framework.authtoken',
     'rest_framework',
 ]
 

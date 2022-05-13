@@ -131,3 +131,12 @@ Content-Type: application/json
     "usuario": 1,
     "aprovado": false
 }
+
+###
+post http://localhost:8000/api-auth-token/
+Content-Type: application/json
+
+{
+    "username": "exemplo",
+    "password": "Novadata123"
+}
