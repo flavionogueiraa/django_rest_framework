@@ -13,7 +13,7 @@ class AtracaoViewSet(viewsets.ModelViewSet):
         filters.SearchFilter,
     ]
 
-    search_fields = [
+    filter_fields = [
         'nome',
         'descricao',
     ]
