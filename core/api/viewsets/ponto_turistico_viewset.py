@@ -2,7 +2,8 @@ from core.models import PontoTuristico
 from rest_framework import filters, viewsets
 from rest_framework.authentication import TokenAuthentication
 from rest_framework.decorators import action
-from rest_framework.permissions import IsAdminUser, IsAuthenticated
+from rest_framework.permissions import (IsAdminUser, IsAuthenticated,
+                                        IsAuthenticatedOrReadOnly, DjangoModelPermissions)
 
 from ..serializers import PontoTuristicoSerializer
 
@@ -11,8 +12,7 @@ class PontoTuristicoViewSet(viewsets.ModelViewSet):
     serializer_class = PontoTuristicoSerializer
 
     permission_classes = [
-        IsAuthenticated,
-        IsAdminUser,
+        DjangoModelPermissions,
     ]
 
     authentication_classes = [

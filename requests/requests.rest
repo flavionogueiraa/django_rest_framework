@@ -21,6 +21,11 @@ Content-Type: application/json
 Authorization: token 601afb84f519691e026b77b64de9677dd28e1c2c
 
 ###
+delete http://localhost:8000/pontos-turisticos/1/
+Content-Type: application/json
+Authorization: token 601afb84f519691e026b77b64de9677dd28e1c2c
+
+###
 get http://localhost:8000/pontos-turisticos/1/
 
 ###
