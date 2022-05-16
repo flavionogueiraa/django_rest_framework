@@ -34,6 +34,11 @@ class Atracao(models.Model):
         verbose_name='Idade mínima'
     )
 
+    observacoes = models.TextField(
+        verbose_name='Observações',
+        null=True, blank=True
+    )
+
     def __str__(self):
         return self.nome
 
