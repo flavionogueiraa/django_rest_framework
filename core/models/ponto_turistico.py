@@ -55,6 +55,10 @@ class PontoTuristico(models.Model):
         blank=True
     )
 
+    @property
+    def descricao_completa2(self):
+        return f'{self.nome} - {self.descricao}'
+
     def __str__(self):
         return self.nome
 

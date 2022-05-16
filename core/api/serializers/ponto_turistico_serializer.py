@@ -4,6 +4,7 @@ from comentarios.api.serializers import ComentarioSerializer
 from core.models import PontoTuristico
 from enderecos.api.serializers import EnderecoSerializer
 from rest_framework import serializers
+from rest_framework.fields import SerializerMethodField
 
 
 class PontoTuristicoSerializer(serializers.ModelSerializer):
@@ -11,6 +12,7 @@ class PontoTuristicoSerializer(serializers.ModelSerializer):
     atracoes = AtracaoSerializer(many=True)
     comentarios = ComentarioSerializer(many=True)
     avaliacoes = AvaliacaoSerializer(many=True)
+    descricao_completa = SerializerMethodField()
 
     class Meta:
         model = PontoTuristico
@@ -18,6 +20,8 @@ class PontoTuristicoSerializer(serializers.ModelSerializer):
             'id',
             'nome',
             'descricao',
+            'descricao_completa',
+            'descricao_completa2',
             'foto',
             'endereco',
             'aprovado',
@@ -25,3 +29,6 @@ class PontoTuristicoSerializer(serializers.ModelSerializer):
             'comentarios',
             'avaliacoes',
         ]
+
+    def get_descricao_completa(self, obj):
+        return f'{obj.nome} - {obj.descricao}'
