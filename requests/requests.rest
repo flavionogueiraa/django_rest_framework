@@ -54,6 +54,31 @@ Authorization: token 23e1cdfd001b8507ac6d7ce19db22e362cdd507e
 }
 
 ###
+
+post http://localhost:8000/pontos-turisticos/
+Content-Type: application/json
+Authorization: token 23e1cdfd001b8507ac6d7ce19db22e362cdd507e
+
+{
+    "nome": "Testando a criação de FKs",
+    "descricao": "Testando a criação de FKs de novo",
+    "foto": null,
+    "endereco": {
+      "linha1": "Rua xyz, exemplo",
+      "linha2": "Teste",
+      "cidade": "Testando",
+      "estado": "RN",
+      "pais": "Brasil",
+      "latitude": 74545661,
+      "longitude": 12367451
+    },
+    "aprovado": true,
+    "atracoes": [],
+    "comentarios": [],
+    "avaliacoes": []
+}
+
+###
 get http://localhost:8000/pontos-turisticos/1/denunciar/
 
 ###
