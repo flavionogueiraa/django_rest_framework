@@ -32,3 +32,16 @@ class ComentarioAdmin(admin.ModelAdmin):
     autocomplete_fields = [
         'usuario'
     ]
+
+    def aprova_comentarios(self, request, queryset):
+        queryset.update(aprovado=True)
+    aprova_comentarios.short_description = 'Aprovar comentários selecionados'
+
+    def reprova_comentarios(self, request, queryset):
+        queryset.update(aprovado=False)
+    reprova_comentarios.short_description = 'Reprovar comentários selecionados'
+
+    actions = [
+        'aprova_comentarios',
+        'reprova_comentarios',
+    ]
