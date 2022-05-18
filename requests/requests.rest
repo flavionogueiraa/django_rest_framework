@@ -30,6 +30,16 @@ get http://localhost:8000/pontos-turisticos/1/
 
 ###
 
+post http://localhost:8000/pontos-turisticos/1/associa_atracoes/
+Content-Type: application/json
+Authorization: token 23e1cdfd001b8507ac6d7ce19db22e362cdd507e
+
+{
+    "ids": [5, 7, 8, 9]
+}
+
+###
+
 post http://localhost:8000/pontos-turisticos/
 Content-Type: application/json
 Authorization: token 23e1cdfd001b8507ac6d7ce19db22e362cdd507e

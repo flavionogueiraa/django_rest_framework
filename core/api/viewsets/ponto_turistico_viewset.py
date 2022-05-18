@@ -1,9 +1,11 @@
 from core.models import PontoTuristico
+from django.http import HttpResponse
 from rest_framework import filters, viewsets
 from rest_framework.authentication import TokenAuthentication
 from rest_framework.decorators import action
-from rest_framework.permissions import (IsAdminUser, IsAuthenticated,
-                                        IsAuthenticatedOrReadOnly, DjangoModelPermissions)
+from rest_framework.permissions import (DjangoModelPermissions, IsAdminUser,
+                                        IsAuthenticated,
+                                        IsAuthenticatedOrReadOnly)
 
 from ..serializers import PontoTuristicoSerializer
 
@@ -70,3 +72,12 @@ class PontoTuristicoViewSet(viewsets.ModelViewSet):
     @action(methods=['get'], detail=False)
     def teste(self, request):
         pass
+
+    @action(methods=['post'], detail=True)
+    def associa_atracoes(self, request, pk):
+        atracoes = request.data['ids']
+        ponto_turistico = PontoTuristico.objects.get(pk=pk)
+        ponto_turistico.atracoes.set(atracoes)
+
+        ponto_turistico.save()
+        return HttpResponse('OK')
