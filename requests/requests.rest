@@ -16,6 +16,11 @@ Content-Type: application/json
 Authorization: token 23e1cdfd001b8507ac6d7ce19db22e362cdd507e
 
 ###
+get http://localhost:8000/pontos-turisticos/?limit=10&offset=10&page=2
+Content-Type: application/json
+Authorization: token 23e1cdfd001b8507ac6d7ce19db22e362cdd507e
+
+###
 get http://localhost:8000/pontos-turisticos/
 Content-Type: application/json
 Authorization: token 601afb84f519691e026b77b64de9677dd28e1c2c
